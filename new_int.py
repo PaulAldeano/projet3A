@@ -172,6 +172,10 @@ class Ui_MainWindow(object):
         self.label_learning.setStyleSheet("color: #FFF;")
         self.label_learning.setAlignment(QtCore.Qt.AlignCenter)
         self.label_learning.setObjectName("label_learning")
+        self.textBrowser_2 = QtWidgets.QTextBrowser(self.Learning)
+        self.textBrowser_2.setGeometry(QtCore.QRect(0, 70, 861, 161))
+        self.textBrowser_2.setStyleSheet("color: #FFF")
+        self.textBrowser_2.setObjectName("textBrowser_2")
         self.Pages_widget.addWidget(self.Learning)
         self.kmeans_cluster = QtWidgets.QWidget()
         self.kmeans_cluster.setObjectName("kmeans_cluster")
@@ -334,7 +338,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.Pages_widget.setCurrentIndex(1)
+        self.Pages_widget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -350,6 +354,12 @@ class Ui_MainWindow(object):
         self.Btn_kmeans.setText(_translate("MainWindow", "Clustering"))
         self.Btn_ML.setText(_translate("MainWindow", "Learning"))
         self.label_learning.setText(_translate("MainWindow", "Learning"))
+        self.textBrowser_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'Ubuntu\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">This is the Machine Learning platfom. Its purpose is to make the process of applying machine learning algorithms easier.</p>\n"
+"<p align=\"justify\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Please start by importing a CSV or TXT file using the import button. Note that for the moment, the algorithms are only supporting numeric datasets, with eventually one classification column.</p></body></html>"))
         self.label_kmeans.setText(_translate("MainWindow", "Clustering"))
         self.Btn_elbow_plot.setText(_translate("MainWindow", "Elbow method"))
         self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
