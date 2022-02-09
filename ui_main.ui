@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(45, 45, 45);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="Topbar">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(35, 35, 35);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_top">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(114, 159, 207);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="Btn_toggle">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(255, 255, 255);
+border: 0px solid</string>
+            </property>
+            <property name="text">
+             <string>ML APP</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_toggle">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(57, 57, 57);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="Btn_import">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>5</y>
+            <width>89</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background-color: rgb(255,255,255);
+}
+QPushButton:hover{
+	color : #FFF;
+	background-color: rgb(0, 0, 0);
+}</string>
+          </property>
+          <property name="text">
+           <string>Import file</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_file_path">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>5</y>
+            <width>391</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: #FFF;
+color :rgb(150, 150, 150)</string>
+          </property>
+          <property name="text">
+           <string>File path</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="Content">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_left_menu">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(57, 57, 57);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignTop">
+           <widget class="QFrame" name="frame_top_menus">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="Btn_linear">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	color:rgb(255,255,255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid
+}
+QPushButton:hover{
+background-color: rgb(85, 170, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string>Linear
+regression</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Btn_poly_reg">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	color:rgb(255,255,255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid
+}
+QPushButton:hover{
+background-color: rgb(85, 170, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string>Polynomial
+regression</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Btn_kmeans">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	color:rgb(255,255,255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid
+}
+QPushButton:hover{
+background-color: rgb(85, 170, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string>Clustering</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Btn_ML">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	color:rgb(255,255,255);
+	background-color: rgb(35, 35, 35);
+	border: 0px solid
+}
+QPushButton:hover{
+background-color: rgb(85, 170, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string>Learning</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_pages">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QStackedWidget" name="Pages_widget">
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <widget class="QWidget" name="Learning">
+             <widget class="QLabel" name="label_learning">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>210</width>
+                <height>61</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>25</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF;</string>
+              </property>
+              <property name="text">
+               <string>Learning</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="kmeans_cluster">
+             <widget class="QLabel" name="label_kmeans">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>195</width>
+                <height>61</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>25</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF;</string>
+              </property>
+              <property name="text">
+               <string>Clustering</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="Btn_elbow_plot">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>280</y>
+                <width>111</width>
+                <height>40</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	color:rgb(255,255,255);
+	background-color: rgb(180, 180, 180);
+	border: 0px solid
+}
+QPushButton:hover{
+background-color: rgb(85, 170, 255);
+}</string>
+              </property>
+              <property name="text">
+               <string>Elbow method</string>
+              </property>
+             </widget>
+             <widget class="QTextBrowser" name="textBrowser">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>70</y>
+                <width>861</width>
+                <height>161</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF</string>
+              </property>
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;WARNING : To experience a correct usage of the cluster method, please get your dataset to encounter these requirements :&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- is a csv file&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- the collumn used for classification has less than 6 different classes AND is the las column in the dataset&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- the other collumns comport numerical values&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;To correctly choose the cluster number, use the elbow method and pick the cluster value corresponding to the elbow of the curve.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="Btn_cluster_kmeans">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>330</y>
+                <width>211</width>
+                <height>40</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	color:rgb(255,255,255);
+	background-color: rgb(180, 180, 180);
+	border: 0px solid
+}
+QPushButton:hover{
+background-color: rgb(85, 170, 255);
+}</string>
+              </property>
+              <property name="text">
+               <string>Clustering with Kmeans</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="cluster_max">
+              <property name="geometry">
+               <rect>
+                <x>120</x>
+                <y>290</y>
+                <width>48</width>
+                <height>26</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>20</number>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_clustermax">
+              <property name="geometry">
+               <rect>
+                <x>190</x>
+                <y>295</y>
+                <width>401</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF</string>
+              </property>
+              <property name="text">
+               <string>Maximum number of clusters for the elbow method</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="cluster_number">
+              <property name="geometry">
+               <rect>
+                <x>220</x>
+                <y>340</y>
+                <width>48</width>
+                <height>26</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>20</number>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_cluster">
+              <property name="geometry">
+               <rect>
+                <x>290</x>
+                <y>345</y>
+                <width>401</width>
+                <height>17</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF</string>
+              </property>
+              <property name="text">
+               <string>Number of clusters for Kmeans</string>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="Linear_reg">
+             <widget class="QLabel" name="label_linear">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>311</width>
+                <height>61</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>25</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF;</string>
+              </property>
+              <property name="text">
+               <string>Linear Regression</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="plot_linearreg">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>90</y>
+                <width>120</width>
+                <height>40</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	color:rgb(255,255,255);
+	background-color: rgb(180, 180, 180);
+	border: 0px solid
+}
+QPushButton:hover{
+background-color: rgb(85, 170, 255);
+}</string>
+              </property>
+              <property name="text">
+               <string>Plot linear 
+regression</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_axis">
+              <property name="geometry">
+               <rect>
+                <x>140</x>
+                <y>90</y>
+                <width>51</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF</string>
+              </property>
+              <property name="text">
+               <string>X axis</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="x_axis_linear">
+              <property name="geometry">
+               <rect>
+                <x>210</x>
+                <y>100</y>
+                <width>48</width>
+                <height>26</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="minimum">
+               <number>0</number>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_ord">
+              <property name="geometry">
+               <rect>
+                <x>280</x>
+                <y>90</y>
+                <width>51</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF</string>
+              </property>
+              <property name="text">
+               <string>Y axis</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="y_ord_linear">
+              <property name="geometry">
+               <rect>
+                <x>350</x>
+                <y>100</y>
+                <width>48</width>
+                <height>26</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="minimum">
+               <number>0</number>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="polynomial_reg">
+             <widget class="QLabel" name="label_polynomial_reg">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>381</width>
+                <height>61</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>25</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF;</string>
+              </property>
+              <property name="text">
+               <string>Polynomial regression</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="plot_polynomial">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>90</y>
+                <width>120</width>
+                <height>40</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+	color:rgb(255,255,255);
+	background-color: rgb(180, 180, 180);
+	border: 0px solid
+}
+QPushButton:hover{
+background-color: rgb(85, 170, 255);
+}</string>
+              </property>
+              <property name="text">
+               <string>Plot polynomial 
+regression</string>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_degree">
+              <property name="geometry">
+               <rect>
+                <x>140</x>
+                <y>90</y>
+                <width>111</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF</string>
+              </property>
+              <property name="text">
+               <string>Select a degree</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="degree_polynomial">
+              <property name="geometry">
+               <rect>
+                <x>270</x>
+                <y>100</y>
+                <width>48</width>
+                <height>26</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>6</number>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_ord_poly">
+              <property name="geometry">
+               <rect>
+                <x>280</x>
+                <y>140</y>
+                <width>51</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF</string>
+              </property>
+              <property name="text">
+               <string>Y axis</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="y_ord_linear_poly">
+              <property name="geometry">
+               <rect>
+                <x>350</x>
+                <y>150</y>
+                <width>48</width>
+                <height>26</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="minimum">
+               <number>0</number>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_axis_poly">
+              <property name="geometry">
+               <rect>
+                <x>140</x>
+                <y>140</y>
+                <width>51</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: #FFF</string>
+              </property>
+              <property name="text">
+               <string>X axis</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="x_axis_linear_poly">
+              <property name="geometry">
+               <rect>
+                <x>210</x>
+                <y>150</y>
+                <width>48</width>
+                <height>26</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="minimum">
+               <number>0</number>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
